@@ -1,0 +1,19 @@
+ @media (min-width: 1200px) {
+     .container {
+         width: 800px;
+     }
+ }
+ label {
+     padding-left: 20px;
+     color: #797979;
+     width: 625px;
+ }
+ span.glyphicon {
+     float: right;
+     padding-right: 25px;
+     padding-top: 4px;
+ }
+ .list-group-item-primary {
+     color: rgb(255, 255, 255);
+     background-color: rgb(66, 139, 202);
+ }

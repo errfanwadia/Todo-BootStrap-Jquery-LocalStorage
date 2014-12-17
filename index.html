@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<title>Todo</title>
+
+<head>
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <script src="lib/jquery-1.10.2.js"></script>
+    <script src="lib/jquery-ui.js"></script>
+
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <script type="application/javascript" src="lib/bootstrap.min.js"></script>
+    <link href="css/app.css" type="text/css" rel="stylesheet" />
+    <script src="app/app.js"></script>
+</head>
+
+<body>
+    <br/>
+    <div class="container">
+        <div class="input-group">
+            <textarea id="description" class="form-control custom-control" rows="2" style="resize:none"></textarea>
+            <span id="add" class="input-group-addon btn btn-primary">Todo</span>
+            <span id="clear" class="input-group-addon btn btn-primary">Clear All</span>
+        </div>
+        <div id="alert"></div>
+        <br/>
+
+        <ul id="todos" class="list-group checked-list-box"></ul>
+    </div>
+
+</body>
+
+</html>
