@@ -121,14 +121,25 @@ $(document).ready(function() {
 
             count = 0;
         } else {
+//            var todos = JSON.parse(localStorage["todos"]);
+//            count = todos.length;
+//            todos.push([Description, false, count]);
+//            localStorage["todos"] = JSON.stringify(todos);
+//
+//            var order = JSON.parse(localStorage["order"]);
+//            order.unshift(count);
+//            localStorage["order"] = JSON.stringify(order);
+            var order = JSON.parse(localStorage["order"]);
+            var count = Math.max.apply(Math, order);
+            count++;
+            order.unshift((count));
+            localStorage["order"] = JSON.stringify(order);
+            
             var todos = JSON.parse(localStorage["todos"]);
-            count = todos.length;
             todos.push([Description, false, count]);
             localStorage["todos"] = JSON.stringify(todos);
-
-            var order = JSON.parse(localStorage["order"]);
-            order.unshift(count);
-            localStorage["order"] = JSON.stringify(order);
+            
+            
         }
         $('#todos').prepend("<li class='list-group-item' id='" + (count) + "'><input name='check' type='checkbox'/><label class=''>" + Description + "</label><a href=#><span class='glyphicon glyphicon-remove' href='#'></a></span></li>");
         bindEvent();
